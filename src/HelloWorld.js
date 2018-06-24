@@ -3,7 +3,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {Button} from "reactstrap";
 
 function randColor() {
-    return '#' + (Math.random() * 0xFFFFFF << 0).toString(16);
+    // return '#' + (Math.random() * 0xFFFFFF << 0).toString(16);
+    return 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';
 }
 
 class App extends Component {
