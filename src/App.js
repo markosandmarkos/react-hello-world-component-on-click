@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import HelloWorld from "./HelloWorld";
-import {Button, Card, CardBody, CardSubtitle, CardTitle, Col, Row} from "reactstrap";
+import {Button, Card, CardBody, CardSubtitle, CardTitle, Col, Row, Container} from "reactstrap";
 
 class App extends Component {
 
@@ -20,7 +20,7 @@ class App extends Component {
         const {countArr} = this.state;
 
         return (
-            <container>
+            <Container>
                 <Row>
                     <Button
                         style={{margin: '10px auto'}}
@@ -34,7 +34,7 @@ class App extends Component {
                 <Row>
                     {countArr.map((value, key) => {
                             return (
-                                <Col xs="3">
+                                <Col xs="3" key={value}>
                                     <Card style={{margin: '10px'}}>
                                         <CardBody>
                                             <CardSubtitle>
@@ -50,7 +50,7 @@ class App extends Component {
                         }
                     )}
                 </Row>
-            </container>
+            </Container>
         );
     }
 }
